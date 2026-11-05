@@ -1,4 +1,7 @@
 import sqlite3
+import sys
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 print("开始构建 DWD 层...")
 conn = sqlite3.connect('credit_warehouse.db')
